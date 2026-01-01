@@ -1,0 +1,106 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background: #121212; /* charcoal black background */
+  color: #f5f5f5;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Main home content */
+.home-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Central Logo */
+.home-logo {
+  width: 250px; /* big hero logo */
+  height: auto;
+  margin-bottom: 35px;
+  transition: transform 0.4s ease;
+}
+
+.home-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Begin button */
+.begin-btn {
+  background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+  border: none;
+  padding: 14px 38px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 28px;
+  color: #f5f5f5;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.begin-btn.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+.begin-btn:hover {
+  background: linear-gradient(145deg, #242424, #3a3a3a);
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.5), 0 0 12px rgba(245,245,245,0.08);
+}
+
+.begin-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+/* Floating logos in background */
+.floating-logos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Each floating logo */
+.floating-logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.1;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
