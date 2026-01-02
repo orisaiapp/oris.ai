@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oris - Get Started</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating logos -->
+  <div class="floating-logos"></div>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-logo">Oris</div>
+    <div class="nav-center">
+      <a href="#about">About</a>
+      <a href="#why">Experience</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <button class="nav-login">Log In</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <h1>
+      Build Without Friction.<br>
+      <span class="hero-highlight">Create With Flow.</span>
+    </h1>
+    <p class="hero-subtext">
+      Oris is a focused, distraction-free environment designed to help you
+      learn, build, and grow at your own pace.
+    </p>
+    <div class="hero-actions">
+      <button class="begin-btn show" onclick="scrollToSection('about')">Get Started</button>
+      <button class="ghost-btn">Join Community</button>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2 class="section-title">About Oris</h2>
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Designed for Focus</h3>
+        <p>Oris removes unnecessary noise so you can stay locked in on what matters most.</p>
+      </div>
+      <div class="info-box">
+        <h3>Built for Exploration</h3>
+        <p>Learn by doing, experimenting, and discovering — not memorizing.</p>
+      </div>
+      <div class="info-box">
+        <h3>Made to Grow With You</h3>
+        <p>Whether you’re starting out or leveling up, Oris adapts to your pace.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE ORIS -->
+  <section class="section muted" id="why">
+    <h2 class="section-title">Why Choose Oris</h2>
+    <div class="info-grid">
+      <div class="info-box glow">
+        <h3>Clarity Over Clutter</h3>
+        <p>Every feature has a purpose — no distractions, no overload.</p>
+      </div>
+      <div class="info-box glow">
+        <h3>Flow-Based Experience</h3>
+        <p>Designed to keep you in rhythm instead of constantly switching focus.</p>
+      </div>
+      <div class="info-box glow">
+        <h3>Built With Intention</h3>
+        <p>Oris is crafted thoughtfully, not rushed or trend-chasing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="section">
+    <h2 class="section-title">Our Mission</h2>
+    <p class="mission-text">
+      Our mission is to create a space where learning and creation feel natural,
+      calm, and rewarding — empowering people to do their best work without
+      pressure or noise.
+    </p>
+  </section>
+
+  <!-- TEAM -->
+<section class="section" id="team">
+  <h2 class="section-title">Meet the Team</h2>
+  
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="team1.jpg" alt="Coming Soon" />
+      <h3>Coming Soon</h3>
+      <p>Coming Soon</p>
+    </div>
+    <div class="team-member">
+      <img src="team2.jpg" alt="Coming Soon" />
+      <h3>Coming Soon</h3>
+      <p>Coming Soon</p>
+    </div>
+    <div class="team-member">
+      <img src="team3.jpg" alt="Coming Soon" />
+      <h3>Coming Soon</h3>
+      <p>Coming Soon</p>
+    </div>
+    <div class="team-member">
+      <img src="team4.jpg" alt="Coming Soon" />
+      <h3>Coming Soon</h3>
+      <p>Coming Soon</p>
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ -->
+  <section class="section muted" id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Is Oris free to use?</summary>
+        <p>Yes. Oris is free to get started and always will be at its core.</p>
+      </details>
+      <details>
+        <summary>Who is Oris for?</summary>
+        <p>Oris is for anyone who wants a focused, intentional environment for learning and building.</p>
+      </details>
+      <details>
+        <summary>Do I need experience?</summary>
+        <p>Not at all, Oris is designed to support beginners and experienced users alike.</p>
+      </details>
+      <details>
+        <summary>How do I join?</summary>
+        <p>Click “Get Started” above and follow the signup prompts — it’s simple and distraction-free.</p>
+      </details>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
