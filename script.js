@@ -3,7 +3,6 @@ const floatingContainer = document.querySelector('.floating-logos');
 const numLogos = 12;
 const logos = [];
 
-// Create floating logos
 for (let i = 0; i < numLogos; i++) {
   const logo = document.createElement('img');
   logo.src = 'logo.png';
@@ -20,7 +19,6 @@ for (let i = 0; i < numLogos; i++) {
   });
 }
 
-// Animate floating logos slowly
 function animateLogos() {
   logos.forEach(logo => {
     logo.y += logo.speed;
@@ -32,20 +30,25 @@ function animateLogos() {
 
 animateLogos();
 
-// Subtle parallax on mouse move
+// Parallax effect on mouse move
 document.addEventListener('mousemove', e => {
   const x = e.clientX / window.innerWidth - 0.5;
   const y = e.clientY / window.innerHeight - 0.5;
   logos.forEach((logo, i) => {
-    const movement = (i % 3 + 1) * 5; // different movement per logo
+    const movement = (i % 3 + 1) * 5;
     logo.el.style.transform = `translate(${x * movement}px, ${y * movement}px) rotate(${Math.random() * 360}deg) scale(${0.5 + Math.random()})`;
   });
 });
 
-// Delayed button animation
+// Delayed Begin button
 const beginBtn = document.querySelector('.begin-btn');
 window.addEventListener('load', () => {
   setTimeout(() => {
     beginBtn.classList.add('show');
-  }, 1000); // 1 second delay
+  }, 1000);
+});
+
+// Begin button navigation
+beginBtn.addEventListener('click', () => {
+  window.location.href = 'get-started.html';
 });
